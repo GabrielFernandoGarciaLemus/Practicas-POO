@@ -103,7 +103,7 @@ public class Personaje {
             vidaRestante -= daño;
             System.out.println(this.nombre + " ha recibido" + _tipo + daño +" puntos de vida");
         } else{
-            System.out.println(this.nombre +" recibio "+ _tipo +" pweo no hizo efecto Aprovecha y acabalo");
+            System.out.println(this.nombre +" recibio "+ _tipo +" pero no hizo efecto Aprovecha y acabalo");
         }
         this.salud = vidaRestante;
          System.out.println(this.nombre +" tiene " + this.salud + " puntos restantes de vida!");
