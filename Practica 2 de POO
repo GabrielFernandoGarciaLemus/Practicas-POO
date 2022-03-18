@@ -12,13 +12,15 @@ public class Personaje {
     
     //Metodo Constructor
     
-    public Personaje(){
-        String nombre ="Caballero";
-        int salud  = 150;
-        int ataque = 30;
-        int defensa = 20;
-        double ta = 0.8;
+    public Personaje(String _nombre, int _salud,int _ataque,int _defensa, double _ta, String _tipo){
         
+        this.nombre = _nombre;
+        this.salud = _salud;
+        this.ataque = _ataque;
+        this.defensa = _defensa;
+        this.ta = _ta;
+        this.tipoA = _tipo;
+
     }
     
     //Metodo para modificar el Nombre
@@ -32,7 +34,7 @@ public class Personaje {
     
     //Metodo para modificar la Salud 
     
-    public void setSalud(String _salud) {
+    public void setSalud(int _salud) {
         this.salud = _salud;
     }
     
@@ -42,8 +44,8 @@ public class Personaje {
    
     //Metodo para modificar el Ataque
     
-    public void setAtaque(String _ataque) {
-        this.nombre = _ataque;
+    public void setAtaque(int _ataque) {
+        this.ataque = _ataque;
     }
     
   
@@ -71,6 +73,13 @@ public class Personaje {
         return this.ta;
     }
     
+    
+    //Metodo Tipo de Ataqure
+    
+    public String getTipoA(){
+        return this.tipoA;
+    }
+    
     //Metodo para conocer cual es el estado del Personaje
     public boolean Estado(){
         boolean vida = true;
@@ -85,16 +94,16 @@ public class Personaje {
     }
     
     //Metodo para Atacar a otro Personaje daño
-    public void Ataque(int _ataque){
+    public void Ataque(int _ataque, String _tipo){
         
         int daño = _ataque-this.defensa;
         int vidaRestante = this.salud;
         
         if(daño>0){
             vidaRestante -= daño;
-            System.out.println(this.nombre + " ha recibido un golpe...Perdio" + daño +" puntos de vida");
+            System.out.println(this.nombre + " ha recibido" + _tipo + daño +" puntos de vida");
         } else{
-            System.out.println(this.nombre +" recibio un golpe pero fue debil...Aprovecha y acabalo");
+            System.out.println(this.nombre +" recibio "+ _tipo +" pweo no hizo efecto Aprovecha y acabalo");
         }
         this.salud = vidaRestante;
          System.out.println(this.nombre +" tiene " + this.salud + " puntos restantes de vida!");
