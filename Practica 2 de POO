@@ -33,7 +33,7 @@ public class Personaje {
     //Metodo para modificar la Salud 
     
     public void setSalud(String _salud) {
-        this.nombre = _salud;
+        this.salud = _salud;
     }
     
     public int getSalud() {
