@@ -25,4 +25,9 @@ public class Mago extends Personaje {
         
     }
     
+   @Override
+    public void ganador() {
+        System.out.println("Mago: Bibidi babidi Mis hechzios vencieron a mi pobre enemigo");
+    }
+    
 }
