@@ -27,4 +27,9 @@ public final class Computadora extends Personaje{
         }
         
     }
+    
+    @Override
+    public void ganador() {
+        System.out.println("Computadora: Mis circuitos fueron los vencedores de este duelo");
+    }
 }
