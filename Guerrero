@@ -29,5 +29,9 @@ public class Guerrero extends Personaje{
         
     }
     
+    @Override
+    public void ganador() {
+        System.out.println("Guerrero: Aaaaaahhhh grito por mi Victoria!!!!");
+    }
     
 }
