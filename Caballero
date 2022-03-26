@@ -27,5 +27,11 @@ public class Caballero extends Personaje {
             
         }
     }
+    
+    @Override
+    public void ganador() {
+        System.out.println("Caballero: Al fin te venci mi debil y torpe enemigo");
+    }
+ 
  
 }
