@@ -2,7 +2,7 @@
 package battle.game;
 
 
-public class Personaje {
+public abstract class Personaje {
     private String nombre;
     private int salud;
     private int ataque;
@@ -104,10 +104,16 @@ public class Personaje {
             System.out.println(this.nombre + " ha recibido" + _tipo + daño +" puntos de vida");
         } else{
             System.out.println(this.nombre +" recibio "+ _tipo +" pero no hizo efecto Aprovecha y acabalo");
+        } if(vidaRestante<0){
+            vidaRestante=0;
         }
         this.salud = vidaRestante;
          System.out.println(this.nombre +" tiene " + this.salud + " puntos restantes de vida!");
     }
+    
+    //Metodo Abstracto para Ganador
+    
+    public abstract void ganador();
 
 
 }
